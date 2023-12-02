@@ -4,6 +4,18 @@ using System.Threading.Tasks;
 
 namespace ECommerce.Api.Customers.Controllers
 {
+    /*
+* Course: 		Web Programming 3
+* Assessment: 	Milestone 4 and 5
+* Created by: 	Jeff Anderson Charriot - 2133124
+* Date: 		30 November 2023
+* Class Name: 	CustomersController.cs
+* Description: 	
+* ECommerce.Api.Customers.Controllers namespace is an ASP.NET Core API controller handling HTTP requests for customer-related operations
+* in an e-commerce system. It relies on an injected ICustomersProvider to retrieve customer data and provides endpoints for listing all customers 
+* and retrieving an individual customer by ID.
+*/
+
     [ApiController]
     [Route("api/customers")]
     public class CustomersController : ControllerBase

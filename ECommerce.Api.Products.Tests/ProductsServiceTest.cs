@@ -22,7 +22,9 @@ namespace ECommerce.Api.Products.Tests
             CreateProducts(dbContext);
 
             var productProfile = new ProductProfile();
+
             var configuration = new MapperConfiguration(cfg => cfg.AddProfile(productProfile));
+
             var mapper = new Mapper(configuration);
 
             var productsProvider = new ProductsProvider(dbContext, null, mapper);
@@ -39,10 +41,16 @@ namespace ECommerce.Api.Products.Tests
             var options = new DbContextOptionsBuilder<ProductsDbContext>()
                 .UseInMemoryDatabase(nameof(GetProductReturnsProductUsingValidId))
                 .Options;
+
+
             var dbContext = new ProductsDbContext(options);
+
             CreateProducts(dbContext);
 
             var productProfile = new ProductProfile();
+
+
+
             var configuration = new MapperConfiguration(cfg => cfg.AddProfile(productProfile));
             var mapper = new Mapper(configuration);
 
